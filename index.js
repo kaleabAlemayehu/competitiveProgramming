@@ -8,6 +8,9 @@
 
 import * as problem from "./leetCode/palindrome.js";
 
-console.log(problem.isPalindromeWithString(123));
-console.log(problem.isPalindromeWithString(121));
-console.log(problem.isPalindromeWithString(-121));
+// console.log(problem.isPalindromeWithString(123));
+// console.log(problem.isPalindromeWithString(121));
+// console.log(problem.isPalindromeWithString(-121));
+console.log(problem.isPalindrome(123));
+console.log(problem.isPalindrome(121));
+console.log(problem.isPalindrome(-121));
