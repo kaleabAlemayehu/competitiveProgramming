@@ -1,0 +1,12 @@
+@param 
+x [Number]
+check if the number is palindrome( read the same when reverse )
+return Boolean
+
+
+solution #1
+
+- change to string and array
+- reverse it and join it
+- compare and return
+
