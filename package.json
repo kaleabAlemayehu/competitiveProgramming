@@ -1,0 +1,12 @@
+{
+  "name": "competitiveprogramming",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "repository of competitive programming questions with implimentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alexandros",
+  "license": "ISC"
+}
