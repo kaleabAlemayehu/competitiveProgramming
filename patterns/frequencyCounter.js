@@ -141,16 +141,13 @@ const validAnagram = (string1, string2) => {
   // loop over one of the string2
   for (let key of string2) {
     // check if they have the same key
-    if (!(key in lookup)) {
+    // it also solve the negative frequency problem by using falsy value
+    if (!lookup[key]) {
       return false;
     }
 
     // dicreament the frequency of the lookup
     lookup[key] = lookup[key] - 1;
-    // if it is dicrement below zero, it is not anagram
-    if (lookup[key] == -1) {
-      return false;
-    }
   }
   return true;
 };
