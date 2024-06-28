@@ -25,7 +25,7 @@
  *
  */
 
-const same = (array1, array2) => {
+const sameMine = (array1, array2) => {
   // check if the have the same length
   if (array1.length === array2.length) {
     // loop over the first array
@@ -48,4 +48,36 @@ const same = (array1, array2) => {
   return false;
 };
 
-export { same };
+const same = (array1, array2) => {
+  // check if they have don't have same length
+  if (array1.length !== array2.length) {
+    return false;
+  }
+  // create frequency counter objects
+  const frequencyCounter1 = {};
+  const frequencyCounter2 = {};
+  // populate the frequency counter for the array1
+  for (let e of array1) {
+    frequencyCounter1[e] = (frequencyCounter1[e] || 0) + 1;
+  }
+  // populate the frequency counter for the array2
+  for (let e of array2) {
+    frequencyCounter2[e] = (frequencyCounter2[e] || 0) + 1;
+  }
+  // loop over the frequency counter and check if they have the same frequency and key
+  console.log(`frequencyCounter1`, frequencyCounter1);
+  console.log(`frequencyCounter2`, frequencyCounter2);
+  for (let e in frequencyCounter1) {
+    // check if the key is exist
+    if (!(e ** 2 in frequencyCounter2)) {
+      return false;
+    }
+    // check if the frequency is equal
+    if (frequencyCounter1[e] !== frequencyCounter2[e ** 2]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+export { sameMine, same };

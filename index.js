@@ -1,9 +1,15 @@
 // import * as counter from "./leetCode/javascript/counter.js";
 import * as frequencyCounter from "./patterns/frequencyCounter.js";
 
+// console.log(frequencyCounter.sameMine([1, 2, 3], [1, 9, 4])); // return true
+// console.log(frequencyCounter.sameMine([1, 2, 1], [4, 4, 1])); // return false
+// console.log(frequencyCounter.sameMine([1, 2, 3], [1, 9])); // return false
+
 console.log(frequencyCounter.same([1, 2, 3], [1, 9, 4])); // return true
 console.log(frequencyCounter.same([1, 2, 1], [4, 4, 1])); // return false
 console.log(frequencyCounter.same([1, 2, 3], [1, 9])); // return false
+console.log(frequencyCounter.same([1, 2, 3, 5, 3, 3], [1, 9, 4, 25, 9, 9])); // return true
+
 // const counter10 = counter.createCounter(10);
 // console.log(counter10());
 // console.log(counter10());
