@@ -94,7 +94,7 @@ const same = (array1, array2) => {
  *
  */
 
-const validAnagram = (string1, string2) => {
+const validAnagramOld = (string1, string2) => {
   // check the length of the strings
   if (string1.length !== string2.length) {
     return false;
@@ -125,4 +125,34 @@ const validAnagram = (string1, string2) => {
   }
   return true;
 };
+
+const validAnagram = (string1, string2) => {
+  // check the length of the strings
+  if (string1.length !== string2.length) {
+    return false;
+  }
+  // create frequency conters for only one of the string
+  const lookup = {};
+
+  // loop over to populate them with key and frequencies
+  for (let char of string1) {
+    lookup[char] = (lookup[char] || 0) + 1;
+  }
+  // loop over one of the string2
+  for (let key of string2) {
+    // check if they have the same key
+    if (!(key in lookup)) {
+      return false;
+    }
+
+    // dicreament the frequency of the lookup
+    lookup[key] = lookup[key] - 1;
+    // if it is dicrement below zero, it is not anagram
+    if (lookup[key] == -1) {
+      return false;
+    }
+  }
+  return true;
+};
+
 export { sameMine, same, validAnagram };

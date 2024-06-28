@@ -11,14 +11,14 @@ import * as frequencyCounter from "./patterns/frequencyCounter.js";
  *
  *
  *
- */
+ *
 
+*/
 console.log(frequencyCounter.validAnagram("kaleab", "beaalk")); // true
 console.log(frequencyCounter.validAnagram("cinema", "iceman")); // true
 console.log(frequencyCounter.validAnagram("lebanew", "balenew")); // true
 console.log(frequencyCounter.validAnagram("adding", "bbbinga")); // false
 console.log(frequencyCounter.validAnagram("djakjfav", "dkajdkaj")); // false
-
 /**
  * 
  * 
