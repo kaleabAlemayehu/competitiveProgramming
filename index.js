@@ -1,14 +1,43 @@
 // import * as counter from "./leetCode/javascript/counter.js";
 import * as frequencyCounter from "./patterns/frequencyCounter.js";
 
+/**
+ * anagram words
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+console.log(frequencyCounter.validAnagram("kaleab", "beaalk")); // true
+console.log(frequencyCounter.validAnagram("cinema", "iceman")); // true
+console.log(frequencyCounter.validAnagram("lebanew", "balenew")); // true
+console.log(frequencyCounter.validAnagram("adding", "bbbinga")); // false
+console.log(frequencyCounter.validAnagram("djakjfav", "dkajdkaj")); // false
+
+/**
+ * 
+ * 
+ * same value for array frequency counter
+ * 
+ * 
+ *
+ * 
+ * 
+
+
 // console.log(frequencyCounter.sameMine([1, 2, 3], [1, 9, 4])); // return true
 // console.log(frequencyCounter.sameMine([1, 2, 1], [4, 4, 1])); // return false
 // console.log(frequencyCounter.sameMine([1, 2, 3], [1, 9])); // return false
-
-console.log(frequencyCounter.same([1, 2, 3], [1, 9, 4])); // return true
-console.log(frequencyCounter.same([1, 2, 1], [4, 4, 1])); // return false
-console.log(frequencyCounter.same([1, 2, 3], [1, 9])); // return false
-console.log(frequencyCounter.same([1, 2, 3, 5, 3, 3], [1, 9, 4, 25, 9, 9])); // return true
+// console.log(frequencyCounter.same([1, 2, 3], [1, 9, 4])); // return true
+// console.log(frequencyCounter.same([1, 2, 1], [4, 4, 1])); // return false
+// console.log(frequencyCounter.same([1, 2, 3], [1, 9])); // return false
+// console.log(frequencyCounter.same([1, 2, 3, 5, 3, 3], [1, 9, 4, 25, 9, 9])); // return true
+*/
 
 // const counter10 = counter.createCounter(10);
 // console.log(counter10());

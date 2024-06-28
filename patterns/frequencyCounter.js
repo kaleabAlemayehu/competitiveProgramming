@@ -80,4 +80,49 @@ const same = (array1, array2) => {
   return true;
 };
 
-export { sameMine, same };
+/**
+ * validAnagram
+ *
+ * @param string string1
+ * @param string string2
+ *
+ * if they are not anagram
+ * @returns boolean  false
+ * if they are anagram
+ * @returns boolean true
+ *
+ *
+ */
+
+const validAnagram = (string1, string2) => {
+  // check the length of the strings
+  if (string1.length !== string2.length) {
+    return false;
+  }
+  // create frequency conters for each string
+  const frequencyCounter1 = {};
+  const frequencyCounter2 = {};
+
+  // loop over to populate them with key and frequencies
+  for (let char of string1) {
+    frequencyCounter1[char] = (frequencyCounter1[char] || 0) + 1;
+  }
+  for (let char of string2) {
+    frequencyCounter2[char] = (frequencyCounter2[char] || 0) + 1;
+  }
+
+  // loop over one of the counters
+  for (let key in frequencyCounter1) {
+    // check if they have the same key
+    if (!(key in frequencyCounter2)) {
+      return false;
+    }
+
+    // check if they have the same frequency
+    if (!(frequencyCounter1[key] == frequencyCounter2[key])) {
+      return false;
+    }
+  }
+  return true;
+};
+export { sameMine, same, validAnagram };
