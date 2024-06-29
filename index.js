@@ -1,5 +1,15 @@
+import * as multiplePointers from "./patterns/multiplePointer.js";
+
+console.log(multiplePointers.sumZero([-3, -2, -1, 0, 1, 2, 3, 4, 5])); // [-3, 3]
+
+console.log(multiplePointers.sumZero([-6, -3, -2, -1, 0, 4, 5])); // undefined
+
+console.log(multiplePointers.sumZero([-3, -2, -1, 0, 5])); // undefined
+
+console.log(multiplePointers.sumZero([-3, -2, -1, 0, 1, 4, 5])); //
+
 // import * as counter from "./leetCode/javascript/counter.js";
-import * as frequencyCounter from "./patterns/frequencyCounter.js";
+// import * as frequencyCounter from "./patterns/frequencyCounter.js";
 
 /**
  * anagram words
@@ -13,12 +23,12 @@ import * as frequencyCounter from "./patterns/frequencyCounter.js";
  *
  *
 
-*/
 console.log(frequencyCounter.validAnagram("kaleab", "beaalk")); // true
 console.log(frequencyCounter.validAnagram("cinema", "iceman")); // true
 console.log(frequencyCounter.validAnagram("lebanew", "balenew")); // true
 console.log(frequencyCounter.validAnagram("adding", "bbbinga")); // false
 console.log(frequencyCounter.validAnagram("djakjfav", "dkajdkaj")); // false
+*/
 /**
  * 
  * 
