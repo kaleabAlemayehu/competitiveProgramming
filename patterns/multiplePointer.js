@@ -50,6 +50,8 @@ const sumZero = (sortedArray) => {
  */
 
 const countUniqueValuesNaive = (sortedArray) => {
+  // if the array is empty return 0
+  if (sortedArray.length == 0) return 0;
   // create pointers
   let i = 0;
   let j = 1;
@@ -76,6 +78,8 @@ const countUniqueValuesNaive = (sortedArray) => {
 
 // with modifng the array
 const countUniqueValues = (sortedArray) => {
+  // if the array is empty return 0
+  if (sortedArray.length == 0) return 0;
   // create pointers
   let i = 0;
   let j = 1;
