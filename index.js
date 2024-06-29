@@ -1,3 +1,23 @@
+/**
+ * countUniqueValues
+ *
+ *
+ */
+
+import * as multiplePointer from "./patterns/multiplePointer.js";
+
+console.log(multiplePointer.countUniqueValues([1, 1, 1, 1, 2])); // 2
+console.log(multiplePointer.countUniqueValues([1, 3, 8, 10])); // 4
+console.log(
+  multiplePointer.countUniqueValues([-3, -1, 0, 0, 0, 0, 1, 2, 2, 2])
+); // 5
+
+/**
+ * 
+ * 
+ * sumZero
+ 
+
 import * as multiplePointers from "./patterns/multiplePointer.js";
 
 console.log(multiplePointers.sumZero([-3, -2, -1, 0, 1, 2, 3, 4, 5])); // [-3, 3]
@@ -7,7 +27,7 @@ console.log(multiplePointers.sumZero([-6, -3, -2, -1, 0, 4, 5])); // undefined
 console.log(multiplePointers.sumZero([-3, -2, -1, 0, 5])); // undefined
 
 console.log(multiplePointers.sumZero([-3, -2, -1, 0, 1, 4, 5])); //
-
+*/
 // import * as counter from "./leetCode/javascript/counter.js";
 // import * as frequencyCounter from "./patterns/frequencyCounter.js";
 
