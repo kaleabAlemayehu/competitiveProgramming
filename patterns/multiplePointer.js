@@ -49,7 +49,7 @@ const sumZero = (sortedArray) => {
  * @returns 11
  */
 
-const countUniqueValues = (sortedArray) => {
+const countUniqueValuesNaive = (sortedArray) => {
   // create pointers
   let i = 0;
   let j = 1;
@@ -72,6 +72,27 @@ const countUniqueValues = (sortedArray) => {
     }
   }
   return unique;
+};
+
+// with modifng the array
+const countUniqueValues = (sortedArray) => {
+  // create pointers
+  let i = 0;
+  let j = 1;
+  // loop the array with lead pointer
+  while (j < sortedArray.length) {
+    // check if sortedArray[i] not equal with sortedArray[j]
+    if (sortedArray[i] !== sortedArray[j]) {
+      // increment i
+      i++;
+      // put the new value( sortedArray[j]) on i index on array
+      sortedArray[i] = sortedArray[j];
+    }
+    // increment the lead pointer j
+    j++;
+  }
+  // return the number of unique values
+  return i + 1;
 };
 
 export { sumZero, countUniqueValues };
