@@ -1,13 +1,24 @@
 /**
+ * binary search divideAndConquer
+ * search
+ */
+
+import { search } from "./patterns/divideAndConquer.js";
+console.log(search([1, 2, 3, 4, 5, 6], 1)); // 0
+console.log(search([1, 2, 3, 4, 5, 6], 6)); // 5
+console.log(search([1, 2, 3, 4, 5, 6], 50)); // -1
+console.log(search([1, 2, 3, 4, 5, 6], -3)); // -1
+
+/**
  *  maxSubArraySum
  *
  */
-import { maxSubArraySum } from "./patterns/slidingWindow.js";
+// import { maxSubArraySum } from "./patterns/slidingWindow.js";
 
-console.log(maxSubArraySum([1, 2, 3, 4, 2, 5, 2, 3], 4)); // 14
-console.log(maxSubArraySum([1, 2, 3, 4, 2, 5, 2, 33], 1)); // 33
-console.log(maxSubArraySum([100, 2, 3, 4, 2, 5, 2, 3], 3)); // 105
-console.log(maxSubArraySum([1, 2, 3], 4)); // null
+// console.log(maxSubArraySum([1, 2, 3, 4, 2, 5, 2, 3], 4)); // 14
+// console.log(maxSubArraySum([1, 2, 3, 4, 2, 5, 2, 33], 1)); // 33
+// console.log(maxSubArraySum([100, 2, 3, 4, 2, 5, 2, 3], 3)); // 105
+// console.log(maxSubArraySum([1, 2, 3], 4)); // null
 /**
  * countUniqueValues
  *

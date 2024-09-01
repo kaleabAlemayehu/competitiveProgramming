@@ -3,6 +3,7 @@
  * @function maxSubArraySum
  * @param arrayOfNumbers @type Array<Int>
  * @param numbersOfDigit @type Number
+ * @returns maxSum @type Number
  */
 
 const maxSubArraySum = (arrayOfNumbers, numbersOfDigit) => {
