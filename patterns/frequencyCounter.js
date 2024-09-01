@@ -14,14 +14,12 @@
  *  return false
  *
  *
- */
-
-/**
+ *
  *
  *  example input
- * array1 = [1, 2, 3], array2 = [4, 1, 9] return true
- * array1 = [1, 2, 3], array2 = [1 ,9] return false
- * array1 = [1, 2, 1], array2 = [4, 4, 1] return false
+ * - array1 = [1, 2, 3], array2 = [4, 1, 9] return true
+ * - array1 = [1, 2, 3], array2 = [1 ,9] return false
+ * - array1 = [1, 2, 1], array2 = [4, 4, 1] return false
  *
  */
 

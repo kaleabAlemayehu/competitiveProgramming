@@ -1,16 +1,26 @@
 /**
+ *  maxSubArraySum
+ *
+ */
+import { maxSubArraySum } from "./patterns/slidingWindow.js";
+
+console.log(maxSubArraySum([1, 2, 3, 4, 2, 5, 2, 3], 4)); // 14
+console.log(maxSubArraySum([1, 2, 3, 4, 2, 5, 2, 33], 1)); // 33
+console.log(maxSubArraySum([100, 2, 3, 4, 2, 5, 2, 3], 3)); // 105
+console.log(maxSubArraySum([1, 2, 3], 4)); // null
+/**
  * countUniqueValues
  *
  *
  */
 
-import * as multiplePointer from "./patterns/multiplePointer.js";
+// import * as multiplePointer from "./patterns/multiplePointer.js";
 
-console.log(multiplePointer.countUniqueValues([1, 1, 1, 1, 2])); // 2
-console.log(multiplePointer.countUniqueValues([1, 3, 8, 10])); // 4
-console.log(
-  multiplePointer.countUniqueValues([-3, -1, 0, 0, 0, 0, 1, 2, 2, 2])
-); // 5
+// console.log(multiplePointer.countUniqueValues([1, 1, 1, 1, 2])); // 2
+// console.log(multiplePointer.countUniqueValues([1, 3, 8, 10])); // 4
+// console.log(
+//   multiplePointer.countUniqueValues([-3, -1, 0, 0, 0, 0, 1, 2, 2, 2])
+// ); // 5
 
 /**
  * 
