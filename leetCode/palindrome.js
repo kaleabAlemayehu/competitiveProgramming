@@ -4,6 +4,17 @@ const isPalindromeWithString = function (x) {
 
   return newValue == value ? true : false;
 };
+const isPalindromeRec = (str) => {
+  if (str.length <= 1) return true;
+  const helper = (s) => {
+    if (s.length <= 1) return s;
+    return helper(s.slice(1)) + s[0];
+  };
+  return str === helper(str);
+};
+
+console.log(isPalindromeRec("cat"));
+console.log(isPalindromeRec("oo"));
 
 const isPalindrome = (x) => {
   if (x < 0) {

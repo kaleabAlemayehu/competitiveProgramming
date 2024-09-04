@@ -4,10 +4,13 @@
  */
 
 import { search } from "./patterns/divideAndConquer.js";
-console.log(search([1, 2, 3, 4, 5, 6], 1)); // 0
-console.log(search([1, 2, 3, 4, 5, 6], 6)); // 5
-console.log(search([1, 2, 3, 4, 5, 6], 50)); // -1
-console.log(search([1, 2, 3, 4, 5, 6], -3)); // -1
+// console.log(search([1, 2, 3, 4, 5, 6], 1)); // 0
+// console.log(search([1, 2, 3, 4, 5, 6], 6)); // 5
+// console.log(search([1, 2, 3, 4, 5, 6], 50)); // -1
+// console.log(search([1, 2, 3, 4, 5, 6], -3)); // -1
+console.log(
+  search([2, 4, 5, 9, 11, 14, 15, 19, 21, 25, 28, 30, 50, 52, 60, 63], 13)
+); // -1
 
 /**
  *  maxSubArraySum
