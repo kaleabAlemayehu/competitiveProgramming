@@ -1,5 +1,9 @@
 package sort
 
+import (
+	"github.com/kaleabAlemayehu/competitiveProgramming/sort/utilities"
+)
+
 func MergeSort(arr []int) []int {
 	if len(arr) <= 1 {
 		return arr
@@ -7,5 +11,5 @@ func MergeSort(arr []int) []int {
 	mid := int(float64(len(arr) / 2))
 	left := MergeSort(arr[0:mid])
 	right := MergeSort(arr[mid:])
-	return *Merge(left, right)
+	return *utilities.Merge(left, right)
 }

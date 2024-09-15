@@ -1,4 +1,4 @@
-package sort
+package utilities
 
 func Merge(arr1 []int, arr2 []int) *[]int {
 	var (

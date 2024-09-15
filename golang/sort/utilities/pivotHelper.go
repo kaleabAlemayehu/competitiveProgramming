@@ -1,4 +1,4 @@
-package sort
+package utilities
 
 func Pivot(arr []int, start int, end int) int {
 	var (

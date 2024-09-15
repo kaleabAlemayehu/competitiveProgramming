@@ -1,4 +1,4 @@
-package sort
+package utilities
 
 func MostDigit(arr []int) (maxDigit int) {
 	for i := 0; i < len(arr); i++ {
