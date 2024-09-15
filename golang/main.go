@@ -15,5 +15,5 @@ func main() {
 	// fmt.Println(array)
 	// fmt.Println(sort.QuickSort(array, 0, len(array)-1))
 	// fmt.Println("pivoted", sort.Pivot(array, 3, len(array)-1))
-	fmt.Println(sort.GetDigit(1230, 3))
+	fmt.Println(sort.CountDigit(323232))
 }
