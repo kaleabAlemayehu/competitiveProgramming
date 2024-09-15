@@ -4,7 +4,9 @@ import "math"
 
 func CountDigit(num int) (digit int) {
 	if num == 0 {
-		return 1
+		digit = 1
+		return
 	}
-	return int(math.Ceil(math.Log10(float64(num))))
+	digit = int(math.Ceil(math.Log10(float64(num))))
+	return
 }
