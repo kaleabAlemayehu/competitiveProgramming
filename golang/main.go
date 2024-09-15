@@ -15,5 +15,7 @@ func main() {
 	// fmt.Println(array)
 	// fmt.Println(sort.QuickSort(array, 0, len(array)-1))
 	// fmt.Println("pivoted", sort.Pivot(array, 3, len(array)-1))
-	fmt.Println(sort.MostDigit(array))
+	// fmt.Println(sort.MostDigit([]int{}))
+	fmt.Println(array)
+	fmt.Printf("sorted: %v\n", sort.RadixSort(array))
 }
