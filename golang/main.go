@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	arr := []int{5, 6, 9, 8, 7, 4, 2, 3, 1}
-	fmt.Println(sort.CyclicSort(arr))
+	arr := []int{5, 6, 9, 10, 202, 9, 8, 7, 4, 2, 3, 1}
+	fmt.Println(sort.CountSort(arr))
 	// sll := &datastructure.SinglyLinkedList{}
 	// sll.Push(10)
 	// sll.Push(12)
