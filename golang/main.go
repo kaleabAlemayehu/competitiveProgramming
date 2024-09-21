@@ -3,17 +3,29 @@ package main
 import (
 	"fmt"
 
-	"github.com/kaleabAlemayehu/competitiveProgramming/sort"
+	datastructure "github.com/kaleabAlemayehu/competitiveProgramming/dataStructure"
 )
 
 func main() {
-	arr := []int{5, 6, 9, 10, 202, 9, 8, 7, 4, 2, 3, 1}
-	fmt.Println(sort.CountSort(arr))
-	// sll := &datastructure.SinglyLinkedList{}
-	// sll.Push(10)
-	// sll.Push(12)
-	// sll.Push(232)
-	// sll.Print()
+	// arr := []int{5, 6, 9, 10, 202, 9, 8, 7, 4, 2, 3, 1}
+	// fmt.Println(sort.CountSort(arr))
+	sll := &datastructure.SinglyLinkedList{}
+	sll.Push(10)
+	sll.Push(12)
+	sll.Push(232)
+	sll.Print()
+	fmt.Println(sll.Pop())
+	sll.Print()
+	fmt.Println(sll.Pop())
+	sll.Print()
+	fmt.Println(sll.Pop())
+	sll.Print()
+	fmt.Println(sll.Pop())
+	sll.Print()
+	fmt.Println(sll.Pop())
+	sll.Print()
+	fmt.Println(sll.Pop())
+	sll.Print()
 	// array := []int{1, 27, 2, 83, 293, 32, 328, 22328323, 232, 78293, 29}
 	// array := []int{-2, 0, -100, 100, 10, 2, 3, 13, 7, 8, 9, 11, 12}
 	// fmt.Print(*(sort.InsertionSort(array)))
