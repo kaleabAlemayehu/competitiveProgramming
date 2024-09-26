@@ -51,10 +51,14 @@ func (l *SinglyLinkedList) Pop() int {
 }
 
 func (l *SinglyLinkedList) Shift() int {
+	fmt.Println("tail", l.tail)
 	if l.head == nil {
 		return -1
 	}
 	val := l.head.data
 	l.head = l.head.next
+	if l.head == nil {
+		l.tail = nil
+	}
 	return val
 }
