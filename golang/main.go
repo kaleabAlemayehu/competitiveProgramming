@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	datastructure "github.com/kaleabAlemayehu/competitiveProgramming/dataStructure"
 )
 
@@ -10,18 +8,18 @@ func main() {
 	// arr := []int{5, 6, 9, 10, 202, 9, 8, 7, 4, 2, 3, 1}
 	// fmt.Println(sort.CountSort(arr))
 	sll := &datastructure.SinglyLinkedList{}
-	sll.Push(10)
-	sll.Push(12)
-	sll.Push(232)
+	sll.Unshift(10)
+	sll.Unshift(12)
+	sll.Unshift(232)
 	sll.Print()
-	fmt.Println("shift", sll.Shift())
-	sll.Print()
-	fmt.Println("shift", sll.Shift())
-	sll.Print()
-	fmt.Println("shift", sll.Shift())
-	sll.Print()
-	fmt.Println("shift", sll.Shift())
-	sll.Print()
+	// fmt.Println("shift", sll.Shift())
+	// sll.Print()
+	// fmt.Println("shift", sll.Shift())
+	// sll.Print()
+	// fmt.Println("shift", sll.Shift())
+	// sll.Print()
+	// fmt.Println("shift", sll.Shift())
+	// sll.Print()
 
 	// fmt.Println(sll.Pop())
 	// sll.Print()

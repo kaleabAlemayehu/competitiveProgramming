@@ -62,3 +62,12 @@ func (l *SinglyLinkedList) Shift() int {
 	}
 	return val
 }
+
+func (l *SinglyLinkedList) Unshift(val int) {
+	node := &Node{data: val}
+	node.next = l.head
+	l.head = node
+	if l.tail == nil {
+		l.tail = node
+	}
+}
