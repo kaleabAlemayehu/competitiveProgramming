@@ -28,6 +28,7 @@ func (l *SinglyLinkedList) Print() {
 		fmt.Print(node.data, ", ")
 	}
 	fmt.Println()
+	fmt.Println("length: ", l.length)
 }
 
 func (l *SinglyLinkedList) Pop() int {
@@ -88,5 +89,27 @@ func (l *SinglyLinkedList) Get(index int) *Node {
 		i++
 	}
 	return node
+}
+func (l *SinglyLinkedList) Insert(index int, value int) *Node {
+	if index > l.length || index < 0 {
+		return nil
+	}
+	node := l.head
+	pre := l.head
+	i := 0
+	for i != index && node != nil {
+		pre = node
+		node = node.next
+		i++
+	}
 
+	newNode := &Node{data: value}
+	if node == pre {
+		newNode.next = l.head
+		l.head = newNode
+		return newNode
+	}
+	newNode.next = pre.next
+	pre.next = newNode
+	return newNode
 }

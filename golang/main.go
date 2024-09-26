@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	datastructure "github.com/kaleabAlemayehu/competitiveProgramming/dataStructure"
 )
 
@@ -13,8 +11,15 @@ func main() {
 	sll.Unshift(10)
 	sll.Unshift(12)
 	sll.Unshift(232)
+	sll.Unshift(1)
+	sll.Unshift(122)
+	sll.Unshift(23)
+
 	sll.Print()
-	fmt.Println("value:", sll.Get(1))
+	sll.Insert(7, 100)
+	sll.Print()
+	// sll.Set()
+	// fmt.Println("value:", sll.Get(1))
 	// fmt.Println("shift", sll.Shift())
 	// sll.Print()
 	// fmt.Println("shift", sll.Shift())
