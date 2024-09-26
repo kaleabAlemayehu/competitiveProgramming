@@ -16,7 +16,7 @@ func main() {
 	sll.Unshift(23)
 
 	sll.Print()
-	sll.Insert(7, 100)
+	sll.Set(3, 100)
 	sll.Print()
 	// sll.Set()
 	// fmt.Println("value:", sll.Get(1))

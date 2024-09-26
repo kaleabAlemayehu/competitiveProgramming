@@ -113,3 +113,12 @@ func (l *SinglyLinkedList) Insert(index int, value int) *Node {
 	pre.next = newNode
 	return newNode
 }
+
+func (l *SinglyLinkedList) Set(index int, value int) bool {
+	node := l.Get(index)
+	if node != nil {
+		node.data = value
+		return true
+	}
+	return false
+}
