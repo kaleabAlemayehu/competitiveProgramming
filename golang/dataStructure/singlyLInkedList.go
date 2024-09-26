@@ -49,3 +49,12 @@ func (l *SinglyLinkedList) Pop() int {
 	return current.data
 
 }
+
+func (l *SinglyLinkedList) Shift() int {
+	if l.head == nil {
+		return -1
+	}
+	val := l.head.data
+	l.head = l.head.next
+	return val
+}
