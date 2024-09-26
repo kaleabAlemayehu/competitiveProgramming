@@ -5,8 +5,9 @@ import (
 )
 
 type SinglyLinkedList struct {
-	head *Node
-	tail *Node
+	head   *Node
+	tail   *Node
+	length int
 }
 
 func (l *SinglyLinkedList) Push(val int) {
@@ -18,6 +19,7 @@ func (l *SinglyLinkedList) Push(val int) {
 		l.tail.next = node
 		l.tail = node
 	}
+	l.length++
 }
 
 func (l *SinglyLinkedList) Print() {
@@ -46,6 +48,7 @@ func (l *SinglyLinkedList) Pop() int {
 
 	pre.next = nil
 	l.tail = pre
+	l.length--
 	return current.data
 
 }
@@ -60,6 +63,7 @@ func (l *SinglyLinkedList) Shift() int {
 	if l.head == nil {
 		l.tail = nil
 	}
+	l.length--
 	return val
 }
 
@@ -70,4 +74,19 @@ func (l *SinglyLinkedList) Unshift(val int) {
 	if l.tail == nil {
 		l.tail = node
 	}
+	l.length++
+}
+
+func (l *SinglyLinkedList) Get(index int) *Node {
+	if index >= l.length || index < 0 {
+		return nil
+	}
+	i := 0
+	node := l.head
+	for i != index {
+		node = node.next
+		i++
+	}
+	return node
+
 }
