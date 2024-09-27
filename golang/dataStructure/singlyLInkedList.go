@@ -90,28 +90,25 @@ func (l *SinglyLinkedList) Get(index int) *Node {
 	}
 	return node
 }
-func (l *SinglyLinkedList) Insert(index int, value int) *Node {
+func (l *SinglyLinkedList) Insert(index int, value int) bool {
 	if index > l.length || index < 0 {
-		return nil
+		return false
 	}
-	node := l.head
-	pre := l.head
-	i := 0
-	for i != index && node != nil {
-		pre = node
-		node = node.next
-		i++
+	if index == l.length {
+		l.Push(value)
+		return true
 	}
-
+	if index == 0 {
+		l.Unshift(value)
+		return true
+	}
+	node := l.Get(index - 1)
 	newNode := &Node{data: value}
-	if node == pre {
-		newNode.next = l.head
-		l.head = newNode
-		return newNode
-	}
-	newNode.next = pre.next
-	pre.next = newNode
-	return newNode
+	newNode.next = node.next
+	node.next = newNode
+	l.length++
+	return true
+
 }
 
 func (l *SinglyLinkedList) Set(index int, value int) bool {

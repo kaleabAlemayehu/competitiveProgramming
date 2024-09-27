@@ -13,10 +13,10 @@ func main() {
 	sll.Unshift(232)
 	sll.Unshift(1)
 	sll.Unshift(122)
-	sll.Unshift(23)
+	// sll.Unshift(23)
 
 	sll.Print()
-	sll.Set(3, 100)
+	sll.Insert(3, 100)
 	sll.Print()
 	// sll.Set()
 	// fmt.Println("value:", sll.Get(1))
