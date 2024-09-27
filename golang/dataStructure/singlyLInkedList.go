@@ -55,7 +55,6 @@ func (l *SinglyLinkedList) Pop() int {
 }
 
 func (l *SinglyLinkedList) Shift() int {
-	fmt.Println("tail", l.tail)
 	if l.head == nil {
 		return -1
 	}
@@ -118,4 +117,22 @@ func (l *SinglyLinkedList) Set(index int, value int) bool {
 		return true
 	}
 	return false
+}
+
+func (l *SinglyLinkedList) Remove(index int) bool {
+	if index >= l.length || index < 0 {
+		return false
+	}
+	if index == 0 {
+		l.Shift()
+		return true
+	}
+	if index == l.length-1 {
+		l.Pop()
+		return true
+	}
+	prev := l.Get(index - 1)
+	prev.next = prev.next.next
+	l.length--
+	return true
 }
