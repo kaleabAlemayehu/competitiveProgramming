@@ -136,3 +136,15 @@ func (l *SinglyLinkedList) Remove(index int) bool {
 	l.length--
 	return true
 }
+
+func (l *SinglyLinkedList) Reverse() {
+	l.head, l.tail = l.tail, l.head
+	var pre, next, node *Node
+	node = l.tail
+	for node != nil {
+		next = node.next
+		node.next = pre
+		pre = node
+		node = next
+	}
+}
