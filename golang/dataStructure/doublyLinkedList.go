@@ -27,6 +27,25 @@ func (d *DoublyLinkedList) Push(value int) {
 	d.length++
 }
 
+func (d *DoublyLinkedList) Pop() int {
+	var val int = d.tail.data
+	if d.length == 0 {
+		return -1
+	}
+	if d.length != 0 && d.length != 1 {
+		d.tail = d.tail.prev
+		d.tail.next.prev = nil
+		d.tail.next = nil
+		d.length--
+	}
+	if d.length != 0 && d.length == 1 {
+		d.head = nil
+		d.tail = nil
+		d.length--
+	}
+	return val
+}
+
 func (d *DoublyLinkedList) PrintForward() {
 	for cur := d.head; cur != nil; cur = cur.next {
 		fmt.Printf("%v ->", cur.data)
