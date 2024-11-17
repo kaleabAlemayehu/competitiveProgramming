@@ -78,6 +78,25 @@ func (d *DoublyLinkedList) Unshift(value int) {
 	}
 }
 
+func (d *DoublyLinkedList) Get(value int) int {
+	if value <= (d.length-1)/2 {
+		for curr, i := d.head, 0; curr != nil; i++ {
+			if value == i {
+				return curr.data
+			}
+			curr = curr.next
+		}
+	} else {
+		for curr, i := d.tail, d.length-1; curr != nil; i-- {
+			if value == i {
+				return curr.data
+			}
+			curr = curr.prev
+		}
+	}
+	return -1
+}
+
 func (d *DoublyLinkedList) PrintForward() {
 	for cur := d.head; cur != nil; cur = cur.next {
 		fmt.Printf("%v ->", cur.data)
