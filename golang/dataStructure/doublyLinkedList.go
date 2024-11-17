@@ -46,6 +46,25 @@ func (d *DoublyLinkedList) Pop() int {
 	return val
 }
 
+func (d *DoublyLinkedList) Shift() int {
+	var val int = d.head.data
+	if d.length == 0 {
+		return -1
+	}
+	if d.length != 0 && d.length != 1 {
+		d.head = d.head.next
+		d.head.prev.next = nil
+		d.head.prev = nil
+		d.length--
+	}
+	if d.length != 0 && d.length == 1 {
+		d.head = nil
+		d.tail = nil
+		d.length--
+	}
+	return val
+}
+
 func (d *DoublyLinkedList) PrintForward() {
 	for cur := d.head; cur != nil; cur = cur.next {
 		fmt.Printf("%v ->", cur.data)
