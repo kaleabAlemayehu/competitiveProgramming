@@ -38,7 +38,7 @@ func (d *DoublyLinkedList) Pop() int {
 		d.tail.next = nil
 		d.length--
 	}
-	if d.length != 0 && d.length == 1 {
+	if d.length == 1 {
 		d.head = nil
 		d.tail = nil
 		d.length--
@@ -57,12 +57,25 @@ func (d *DoublyLinkedList) Shift() int {
 		d.head.prev = nil
 		d.length--
 	}
-	if d.length != 0 && d.length == 1 {
+	if d.length == 1 {
 		d.head = nil
 		d.tail = nil
 		d.length--
 	}
 	return val
+}
+
+func (d *DoublyLinkedList) Unshift(value int) {
+	newNode := &Node{data: value}
+	if d.length == 0 {
+		d.head = newNode
+		d.tail = newNode
+	} else {
+		d.head.prev = newNode
+		newNode.next = d.head
+		d.head = newNode
+		d.length++
+	}
 }
 
 func (d *DoublyLinkedList) PrintForward() {
