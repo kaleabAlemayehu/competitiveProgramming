@@ -7,19 +7,21 @@ import (
 func main() {
 	// arr := []int{5, 6, 9, 10, 202, 9, 8, 7, 4, 2, 3, 1}
 	// fmt.Println(sort.CountSort(arr))
-	sll := &datastructure.SinglyLinkedList{}
-	sll.Push(10)
-	sll.Push(12)
-	sll.Push(232)
-	sll.Push(1)
-	sll.Push(122)
+	dls := &datastructure.DoublyLinkedList{}
+	dls.Push(10)
+	dls.Push(12)
+	dls.Push(232)
+	dls.Push(1)
+	dls.Push(122)
+	dls.PrintForward()
+	dls.PrintBackward()
 	// sll.Unshift(23)
 
-	sll.Print()
-	sll.Reverse()
-	sll.Print()
-	sll.Reverse()
-	sll.Print()
+	// sll.Print()
+	// sll.Reverse()
+	// sll.Print()
+	// sll.Reverse()
+	// sll.Print()
 	// // sll.Insert(3, 100)
 	// sll.Remove(3)
 	// // sll.Insert(3, 100)
