@@ -10,7 +10,7 @@ type DoublyLinkedList struct {
 	length int
 }
 
-func New() *DoublyLinkedList {
+func NewDll() *DoublyLinkedList {
 	return &DoublyLinkedList{}
 }
 
