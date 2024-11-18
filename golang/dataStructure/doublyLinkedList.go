@@ -131,6 +131,7 @@ func (d *DoublyLinkedList) Insert(index, value int) bool {
 				newNode.next = curr
 				newNode.prev = curr.prev
 				curr.prev = newNode
+				d.length++
 				return true
 			}
 			curr = curr.next
@@ -143,6 +144,50 @@ func (d *DoublyLinkedList) Insert(index, value int) bool {
 				newNode.next = curr
 				newNode.prev = curr.prev
 				curr.prev = newNode
+				d.length++
+				return true
+			}
+			curr = curr.prev
+		}
+	}
+	return false
+}
+
+func (d *DoublyLinkedList) Remove(index int) bool {
+	if index <= (d.length-1)/2 {
+		for curr, i := d.head, 0; curr != nil; i++ {
+			if index == i {
+				if index != 0 {
+					curr.prev.next = curr.next
+					curr.next.prev = curr.prev
+					curr.next = nil
+					curr.prev = nil
+				} else {
+					curr.next.prev = curr.prev
+					d.head = curr.next
+					curr.next = nil
+					curr.prev = nil
+				}
+				d.length--
+				return true
+			}
+			curr = curr.next
+		}
+	} else {
+		for curr, i := d.tail, d.length-1; curr != nil; i-- {
+			fmt.Println("current", curr.data)
+			if index == i {
+				if index != d.length-1 {
+					curr.prev.next = curr.next
+					curr.next.prev = curr.prev
+					curr.next = nil
+					curr.prev = nil
+				} else {
+					curr.prev.next = nil
+					curr.prev = nil
+					d.tail = curr.prev
+				}
+				d.length--
 				return true
 			}
 			curr = curr.prev
