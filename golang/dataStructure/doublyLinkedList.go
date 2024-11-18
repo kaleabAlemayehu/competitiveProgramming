@@ -97,6 +97,27 @@ func (d *DoublyLinkedList) Get(value int) int {
 	return -1
 }
 
+func (d *DoublyLinkedList) Set(index, value int) bool {
+	if index <= (d.length-1)/2 {
+		for curr, i := d.head, 0; curr != nil; i++ {
+			if index == i {
+				curr.data = value
+				return true
+			}
+			curr = curr.next
+		}
+	} else {
+		for curr, i := d.tail, d.length-1; curr != nil; i-- {
+			if index == i {
+				curr.data = value
+				return true
+			}
+			curr = curr.next
+		}
+	}
+	return false
+}
+
 func (d *DoublyLinkedList) PrintForward() {
 	for cur := d.head; cur != nil; cur = cur.next {
 		fmt.Printf("%v ->", cur.data)

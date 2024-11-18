@@ -20,8 +20,8 @@ func main() {
 	// dll.Shift()
 	// dll.Shift()
 	dll.PrintForward()
-	fmt.Printf("value: at index 3 is : %v\n", dll.Get(3))
-	fmt.Printf("value: at index 1 is : %v\n", dll.Get(1))
+	fmt.Printf("set 3 at index 1 is : %v\n", dll.Set(1, 3))
+	fmt.Printf("set 120 at index 2 is : %v\n", dll.Set(2, 120))
 	dll.PrintForward()
 	// sll.Unshift(23)
 
