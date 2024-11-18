@@ -118,6 +118,39 @@ func (d *DoublyLinkedList) Set(index, value int) bool {
 	return false
 }
 
+func (d *DoublyLinkedList) Insert(index, value int) bool {
+	if index <= (d.length-1)/2 {
+		for curr, i := d.head, 0; curr != nil; i++ {
+			if index == i {
+				newNode := &Node{data: value}
+				if index != 0 {
+					curr.prev.next = newNode
+				} else {
+					d.head = newNode
+				}
+				newNode.next = curr
+				newNode.prev = curr.prev
+				curr.prev = newNode
+				return true
+			}
+			curr = curr.next
+		}
+	} else {
+		for curr, i := d.tail, d.length-1; curr != nil; i-- {
+			if index == i {
+				newNode := &Node{data: value}
+				curr.prev.next = newNode
+				newNode.next = curr
+				newNode.prev = curr.prev
+				curr.prev = newNode
+				return true
+			}
+			curr = curr.prev
+		}
+	}
+	return false
+}
+
 func (d *DoublyLinkedList) PrintForward() {
 	for cur := d.head; cur != nil; cur = cur.next {
 		fmt.Printf("%v ->", cur.data)
