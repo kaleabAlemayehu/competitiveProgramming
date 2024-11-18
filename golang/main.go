@@ -5,16 +5,25 @@ import (
 )
 
 func main() {
-	stack := datastructure.NewStack()
-
-	stack.Push(1)
+	queue := datastructure.NewQueue()
+	queue.EnQueue(1)
+	queue.EnQueue(2)
+	queue.EnQueue(3)
+	queue.EnQueue(4)
+	queue.Print()
+	queue.DeQueue()
+	queue.DeQueue()
+	queue.Print()
+	// stack := datastructure.NewStack()
+	//
+	// stack.Push(1)
 	// stack.Push(10)
 	// stack.Push(100)
 	// stack.Push(1000)
-	stack.Print()
-	stack.Pop()
+	// stack.Print()
 	// stack.Pop()
-	stack.Print()
+	// stack.Pop()
+	// stack.Print()
 	// arr := []int{5, 6, 9, 10, 202, 9, 8, 7, 4, 2, 3, 1}
 	// fmt.Println(sort.CountSort(arr))
 	// dll := datastructure.NewDll()
