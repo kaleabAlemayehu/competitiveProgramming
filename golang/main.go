@@ -1,19 +1,30 @@
 package main
 
 import (
+	"fmt"
 	datastructure "github.com/kaleabAlemayehu/competitiveProgramming/dataStructure"
 )
 
 func main() {
-	queue := datastructure.NewQueue()
-	queue.EnQueue(1)
-	queue.EnQueue(2)
-	queue.EnQueue(3)
-	queue.EnQueue(4)
-	queue.Print()
-	queue.DeQueue()
-	queue.DeQueue()
-	queue.Print()
+	bst := datastructure.NewBST()
+	fmt.Println("root", bst.Insert(20).Root)
+	fmt.Println("right", bst.Insert(30).Root.Right)
+	fmt.Println("left", bst.Insert(10).Root.Left)
+	// fmt.Println("left", bst.Insert(10))
+	fmt.Println("right-right", bst.Insert(40).Root.Right.Right)
+	fmt.Println("right-left", bst.Insert(28).Root.Right.Left)
+	fmt.Println("left-left", bst.Insert(5).Root.Left.Left)
+	fmt.Println("left-right", bst.Insert(15).Root.Left.Right)
+	fmt.Println("root", bst.Root)
+	// queue := datastructure.NewQueue()
+	// queue.EnQueue(1)
+	// queue.EnQueue(2)
+	// queue.EnQueue(3)
+	// queue.EnQueue(4)
+	// queue.Print()
+	// queue.DeQueue()
+	// queue.DeQueue()
+	// queue.Print()
 	// stack := datastructure.NewStack()
 	//
 	// stack.Push(1)
