@@ -36,3 +36,17 @@ func (b *BST) Insert(value int) *BST {
 	}
 	return b
 }
+
+func (b *BST) Search(value int) *Bstnode {
+	curr := b.Root
+	for curr != nil {
+		if curr.Data == value {
+			return curr
+		} else if value > curr.Data {
+			curr = curr.Right
+		} else {
+			curr = curr.Left
+		}
+	}
+	return nil
+}
