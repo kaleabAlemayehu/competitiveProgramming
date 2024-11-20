@@ -68,7 +68,8 @@ func Run() {
 	mytree.Root.left.left.left = &treeNode{data: 101}
 	mytree.Root.left.right.right = &treeNode{data: 55}
 	mytree.Root.right.right.left = &treeNode{data: 44}
-	fmt.Println("bfs-value", mytree.bfs())
+	mytree.Preorder()
+
 	/*
 					   2
 				      8        10
@@ -76,6 +77,8 @@ func Run() {
 				101     55    13   44
 		[2, 8, 10, 0, 80, 30, 22, 101, 55, 13, 44]
 		[2, 8, 10, 0, 80, 30, 22, 101, 55, 13, 44]
+		preorder - 2 8 0 101 80 55 10 30 13 22 44
+			   2 8 0 101 80 55 10 30 13 22 44
 	*/
 }
 
@@ -94,4 +97,21 @@ func (q *tree) bfs() []int {
 		}
 	}
 	return nodes
+}
+
+func preorderHelper(node *treeNode, nodes *[]int) *[]int {
+	currentNode := append(*nodes, node.data)
+	if node.left != nil {
+		currentNode = *(preorderHelper(node.left, &currentNode))
+	}
+	if node.right != nil {
+		currentNode = *(preorderHelper(node.right, &currentNode))
+	}
+	return &currentNode
+}
+
+func (q *tree) Preorder() {
+	current := q.Root
+	nodes := []int{}
+	fmt.Println("nodes", preorderHelper(current, &nodes))
 }
