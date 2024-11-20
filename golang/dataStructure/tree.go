@@ -68,19 +68,19 @@ func Run() {
 	mytree.Root.left.left.left = &treeNode{data: 101}
 	mytree.Root.left.right.right = &treeNode{data: 55}
 	mytree.Root.right.right.left = &treeNode{data: 44}
-	mytree.Postorder()
+	mytree.Inorder()
 
 	/*
 					       2
-				      8        10
-				   0   80   30      22
-				101     55    13   44
+				          8        10
+				        0   80   30      22
+				   101        55    13 44
 		[2, 8, 10, 0, 80, 30, 22, 101, 55, 13, 44]
 		[2, 8, 10, 0, 80, 30, 22, 101, 55, 13, 44]
 		preorder - 2 8 0 101 80 55 10 30 13 22 44
 			       2 8 0 101 80 55 10 30 13 22 44
 		postorder  101 0 55 80 8 13 30 44 22 10 2
-				   101 0 55 80 8 13 30 44 22 10 2
+				   101 0 8 80 55 2 30 13 10 44 22
 	*/
 }
 
@@ -134,4 +134,22 @@ func (q *tree) Postorder() {
 	current := q.Root
 	nodes := []int{}
 	fmt.Println("nodes", postorderHelper(current, &nodes))
+}
+
+func inorderHelper(node *treeNode, nodes *[]int) *[]int {
+	currentNode := []int{}
+	if node.left != nil {
+		currentNode = append(currentNode, *(inorderHelper(node.left, &currentNode))...)
+	}
+	currentNode = append(currentNode, node.data)
+	if node.right != nil {
+		currentNode = append(currentNode, *(inorderHelper(node.right, &currentNode))...)
+	}
+	return &currentNode
+}
+
+func (q *tree) Inorder() {
+	current := q.Root
+	nodes := []int{}
+	fmt.Println("nodes", inorderHelper(current, &nodes))
 }
