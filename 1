@@ -8,7 +8,7 @@ import (
 
 func main() {
 	var heap []int = []int{}
-	h := datastructure.InsertHeap(heap, 10)
+	h := datastructure.InsertHeap(&heap, 10)
 	h = datastructure.InsertHeap(h, 20)
 	h = datastructure.InsertHeap(h, 30)
 	h = datastructure.InsertHeap(h, 300)
@@ -21,7 +21,7 @@ func main() {
 	h = datastructure.InsertHeap(h, 7000)
 	max := datastructure.ExtractMax(h)
 	fmt.Printf("Max: %d\n", max)
-	for i, v := range h {
+	for i, v := range *h {
 		fmt.Printf("index: %d, value: %d\n", i, v)
 	}
 
