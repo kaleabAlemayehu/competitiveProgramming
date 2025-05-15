@@ -4,15 +4,12 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        hm = {}
+        hm =defaultdict(list) 
         for val in strs:
             key= [0]*26
             for s in val:
                 key[ord(s)- ord('a')] += 1
-            if hm.get(tuple(key), 0) == 0:
-                hm[tuple(key)] =[val] 
-            else:
-                hm[tuple(key)].append(val)
+            hm[tuple(key)].append(val)
         return hm.values()
                 
         
