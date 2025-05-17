@@ -9,12 +9,10 @@ class Solution(object):
         j = len(s) - 1
 
         while i <= j:
-            osi = ord(s[i])
-            osj = ord(s[j])
-            if (osi < ord('a') or osi > ord('z')) and not (osi >= ord('0') and osi <= ord('9')):
+            if not s[i].isalnum():
                 i+=1
                 continue
-            if (osj < ord('a') or osj > ord('z')) and not (osj >= ord('0') and osj <= ord('9')):
+            if not s[j].isalnum():
                 j-=1
                 continue
             if s[i] != s[j]:
