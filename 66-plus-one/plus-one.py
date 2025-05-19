@@ -4,25 +4,14 @@ class Solution(object):
         :type digits: List[int]
         :rtype: List[int]
         """
-        l = len(digits) - 1
-        if digits[l] != 9: 
-            digits[l] += 1
-            return digits
-        re = 0
-        while digits[l] == 9:
-            digits[l] = 0
-            re = 1
-            l-=1
-        if re == 1:
-            if digits[0] == 0:
-                digits.append(0)
-                if l < 0:
-                    l = 0
-                digits[l] = 1
-            else:
-                if l < 0:
-                    l = 0
-                digits[l] += re
+        for i in range(len(digits)-1, -1, -1):
+            if digits[i] < 9:
+                digits[i] += 1
+                return digits
+            digits[i] = 0
+        
+        digits.append(0)
+        digits[i] = 1
         return digits
             
         
