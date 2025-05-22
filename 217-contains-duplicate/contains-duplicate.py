@@ -4,11 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        fqc = defaultdict(int) 
+        seen = set() 
         for n in nums:
-            fqc[n] += 1 
-            if fqc[n] > 1:
+            if n in seen:
                 return True
+            seen.add(n)
 
         return False
             
