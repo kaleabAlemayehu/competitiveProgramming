@@ -7,16 +7,9 @@ class Solution(object):
         """
         hm = defaultdict()
         for i, n in enumerate(nums):
-            if hm.get(n,0) == 0:
-                hm[n]= [i]
-            else:
-                hm[n].append(i)
-        for key, fq in hm.items():
-            if len(fq) > 1:
-                for i in range(len(fq)):
-                    for j in range(i+1, len(fq)):
-                        if abs(fq[i] - fq[j]) <= k:
-                            return True
+            if n in hm and abs(hm[n] - i) <= k:
+                    return True
+            hm[n]= i
         return False
             
 
