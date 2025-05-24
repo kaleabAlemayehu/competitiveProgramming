@@ -10,9 +10,7 @@ class Solution(object):
             currentSum=numbers[i] + numbers[j]
             if  currentSum < target:
                 i +=1
-                continue
             if currentSum > target:
                 j -=1
-                continue
             if currentSum == target:
                return [i+1, j+1] 
