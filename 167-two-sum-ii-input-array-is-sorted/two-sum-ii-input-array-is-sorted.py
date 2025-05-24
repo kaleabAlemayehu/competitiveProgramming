@@ -8,9 +8,10 @@ class Solution(object):
         i = 0 
         j = len(numbers) - 1
         while i < j:
-            if numbers[i] + numbers[j] < target:
+            currentSum=numbers[i] + numbers[j]
+            if  currentSum< target:
                 i +=1
-            if numbers[i] + numbers[j] > target:
+            if currentSum> target:
                 j -=1
-            if numbers[i] + numbers[j] == target:
+            if currentSum== target:
                return [i+1, j+1] 
