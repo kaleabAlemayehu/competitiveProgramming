@@ -4,23 +4,21 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        openings = {'(', '{', '['}
-        hm = {
-            '(':')',
-            '{': '}',
-            '[':']'
+        closings = {
+            ')':'(',
+            '}': '{',
+            ']':'['
         }
         stack = []
         for c in s:
-            if c in openings:
-                stack.append(c)
+            if c in closings:
+                if stack and stack[-1] == closings[c]:
+                    stack.pop()
+                else:
+                    return False
             else:
-                if len(stack) == 0:
-                    return False
-                if c != hm[stack[-1]]:
-                    return False
-                stack = stack[:len(stack)- 1]
-        if len(stack) != 0:
+                stack.append(c)
+        if stack:
             return False
         return True
 
