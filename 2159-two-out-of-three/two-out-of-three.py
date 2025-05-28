@@ -7,8 +7,8 @@ class Solution:
             hm[n] = hm.get(n,0) + 1
         for n in set(nums3):
             hm[n] = hm.get(n,0) + 1
-        resSet =set() 
+        res = []
         for key, val in hm.items():
             if val > 1:
-                resSet.add(key)
-        return list(resSet)
+                res.append(key)
+        return res
