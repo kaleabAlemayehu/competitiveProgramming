@@ -1,7 +1,5 @@
 class Solution:
     def checkAlmostEquivalent(self, word1: str, word2: str) -> bool:
-        if len(word1)  != len(word2):
-            return False
         fq1 = {}
         fq2 = {}
         for s in word1:
