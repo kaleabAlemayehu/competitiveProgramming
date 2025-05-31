@@ -6,17 +6,12 @@ class ListNode:
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        s = head 
-        if head:
-            f = head.next
-        else:
-            return False
-        while s != f:
-            if f and f.next:
-                f = f.next.next
-                s = s.next
-            else:
-                return False
-        return True
+        s,f = head , head
+        while f and f.next:
+            f = f.next.next
+            s = s.next
+            if f == s:
+                return True
+        return False
 
         
