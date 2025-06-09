@@ -1,13 +1,13 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         pair = {}
-        for i, c in enumerate(s):
-            if c not in pair:
-                if t[i] in pair.values():
+        for cs, ct in zip(s,t):
+            if cs not in pair:
+                if ct in pair.values():
                     return False
-                pair[c] = t[i]
+                pair[cs] = ct
             else:
-                if pair[c] != t[i]:
+                if pair[cs] != ct:
                     return False
         return True
             
