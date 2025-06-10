@@ -1,13 +1,14 @@
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
-        n = len(nums)
-        expSum = (n *(n + 1)) / 2
-        accSum = sum(nums)
-        fq = Counter(nums) 
-        for k, v in fq.items():
-            if v > 1:
-                missed = int(expSum - ( accSum - k))
-                return [k, missed]
+        fq = Counter(nums)
+        missing, duplicated = -1, -1
+        for i in range(1, len(nums)+1):
+            if fq[i] == 0:
+                missing = i 
+            elif fq[i] == 2:
+                duplicated = i
+        return [ duplicated, missing]
+                
 
 
 
