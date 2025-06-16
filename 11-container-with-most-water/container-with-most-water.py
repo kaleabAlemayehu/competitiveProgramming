@@ -4,12 +4,8 @@ class Solution:
         i = 0
         j = len(height) - 1
         while i < j:
-            ai = height[i]
-            aj = height[j]
-            newM = (j - i) * min(ai,aj)
-            if newM > m:
-                m = newM
-            if ai <= aj:
+            m = max((j - i) * min(height[i],height[j]), m)
+            if height[i] <= height[j]:
                 i += 1
             else:
                 j -= 1
