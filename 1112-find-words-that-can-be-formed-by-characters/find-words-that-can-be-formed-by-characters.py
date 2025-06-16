@@ -3,13 +3,10 @@ class Solution:
         c = Counter(chars) 
         total = 0
         for w in words:
-            nc = Counter(w)
-            isGood = True
-            for key, val in nc.items():
-                if key not in c or val > c[key]:
-                    isGood = False
+            for c in w:
+                if chars.count(c) < w.count(c):
                     break
-            if isGood:
+            else:
                 total += len(w)
         return total
             
