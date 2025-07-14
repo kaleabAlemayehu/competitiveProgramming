@@ -10,17 +10,12 @@ class Solution:
         while i:
             stack.append(i)
             i = i.next
-        prev, curr = None, None
-        while n != 0:
-            prev = curr
-            curr = stack.pop()
-            n -= 1
-        if len(stack):
-            poped = stack.pop()
-            poped.next = prev
-        else:
-            head = head.next
-
+        removeIndex = len(stack) - n
+        if removeIndex == 0:
+            return head.next
+            
+        stack[removeIndex - 1].next =  stack[removeIndex].next
         return head
+
 
         
