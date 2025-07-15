@@ -12,11 +12,8 @@ class Solution:
             l1v = l1.val if l1 else 0
             l2v = l2.val if l2 else 0
             s = carryOn + l2v + l1v
-            if s > 9:
-                carryOn = s // 10
-                s = s % 10
-            else:
-                carryOn = 0
+            carryOn = s // 10
+            s = s % 10
             nl.next = ListNode(s)
             nl = nl.next
             l1 = l1.next if l1 else None
